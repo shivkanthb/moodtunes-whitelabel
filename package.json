@@ -1,27 +1,22 @@
 {
-  "name": "moodtunesus",
-  "version": "1.0.0",
-  "description": "ambient sounds to improve productivity",
-  "main": "app.js",
+  "name": "whitelabeltest",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
   "dependencies": {
-    "connect": "^3.4.0",
-    "cookie-parser": "^1.3.5",
-    "consolidate": "^0.13.1",
-    "body-parser": "^1.13.1",
-    "express-session": "^1.11.3",
-    "method-override": "^2.3.5",
-    "grant-express": "^3.4.0",
-    "express": "^4.13.0",
-    "mongoose": "^4.0.6",
-    "nodemon": "^1.8.1",
-    "path": "^0.11.14",
+    "express": "^4.13.3",
+    "serve-favicon": "^2.3.0",
     "morgan": "^1.6.1",
+    "cookie-parser": "^1.3.3",
+    "body-parser": "^1.13.3",
     "swig": "^1.4.2"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "shiv",
-  "license": "ISC"
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-plumber": "^1.0.0"
+  }
 }

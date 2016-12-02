@@ -1,148 +1,115 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Moodtunes us</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/custom.css">
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-  <!--<link rel="stylesheet" href="css/github-prettify-theme.css">
-  <script src="js/site.js"></script>-->
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="Skeleton-2.0.4/images/favicon.png">
-
-</head>
-<body class="code-snippets-visible">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <section class="header">
-      <h2 class="title">Ambient sounds to improve productivity.</h2>
-      <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
-      <div class="value-props row">
-        <div class="four columns value-prop">
-          <img class="value-img" src="images/feather.svg">
-          Light as a feather at ~400 lines &amp; built with mobile in mind.
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en-us"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en-us"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 lt-ie9" lang="en-us"> <![endif]-->
+<!--[if lt IE 10]> <html class="no-js lt-ie10" lang="en-us"> <![endif]-->
+<!--[if !IE]> > <![endif]-->
+<html>
+  <head>
+    <title>WHITE LABEL TEMPLATE</title>
+    <base href='/'>
+    <link href='' rel='canonical'>
+    <meta charset='utf-8' content='text/html' http-equiv='content-type'>
+    <meta content='ie=edge,chrome=1' http-equiv='x-ua-compatible'>
+    <meta content='' name='description'>
+    <meta content='' name='author'>
+    <meta content='' property='fb:app_id'>
+    <meta content='' property='og:url'>
+    <meta content='' property='og:description'>
+    <meta content='' property='og:title'>
+    <meta content='' property='og:image'>
+    <meta content='' property='og:site_name'>
+    <meta content='' name='apple-itunes-app'>
+    <meta content='app' name='twitter:card'>
+    <meta content='' name='twitter:site'>
+    <meta content='' name='twitter:description'>
+    <meta content='US' name='twitter:app:country'>
+    <meta content='' name='twitter:app:name:iphone'>
+    <meta content='' name='twitter:app:id:iphone'>
+    <meta content='' name='twitter:app:name:ipad'>
+    <meta content='' name='twitter:app:id:ipad'>
+    <meta content='' name='twitter:app:name:googleplay'>
+    <meta content='' name='twitter:app:id:googleplay'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width' name='viewport'>
+    <meta content='initial-scale=1.0,user-scalable=no,maximum-scale=1' media='(device-height: 568px)' name='viewport'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+    <link href='img/favicon.png' rel='shortcut icon'>
+    <link href='img/safaricon.png' rel='apple-touch-icon'>
+    <link href="css/main-0c3a52b1.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <body ng-app='App'>
+      <div class='main'>
+        <div class='logo col-5 mx-auto mt4'>
+          <a href='/'>
+            <img alt='White Label Template' class='fit' src='img/logo-58773ac0.svg'>
+          </a>
+          <h2 class='center'>White Label Template</h2>
         </div>
-        <div class="four columns value-prop">
-          <img class="value-img" src="images/pens.svg">
-          Styles designed to be a starting point, not a UI framework.
-        </div>
-        <div class="four columns value-prop">
-          <img class="value-img" src="images/watch.svg">
-          Quick to start with zero compiling or installing necessary.
+        <ng-view></ng-view>
+        <div class='main__archive ng-cloak animatedLong fadeIn'>
+          <ul class='main__archive-grid' ng-controller='MixListCtrl'>
+            <li class='currentMix mix' ng-repeat='mix in Mix.Mixes.array'>
+              <div ng-class="{'mixtapes': true, 'playing': mix.id === Mix.PlayingMixID}" ng-click='ChangeMixtape(mix)'>
+                <img alt='{{mix.title}}' class='lazy animated fadeIn' data-original='{{mix.artwork_url}}?h=250&amp;w=250' height='250' src='/img/grey-c08ae59b.jpg' width='250'>
+                <span>{{mix.title}}</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
-            <div id="codeNavPopover" class="popover">
-              <ul class="popover-list">
-                <li class="popover-item">
-                  <a class="popover-link" href="#grid">Grid</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#typography">Typography</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#buttons">Buttons</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#forms">Forms</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#lists">Lists</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#code">Code</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#tables">Tables</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#queries">Queries</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#utilities">Utilities</a>
-                </li>
-              </ul>
+      <div class='footer-player'>
+        <div class='audio-player' ng-controller='AudioCtrl'>
+          <div class='audio-player__track-info center ng-cloak'>
+            <div class='audio-player__artist animatedMed fadeIn'>
+              <p class='m0 truncate' ng-bind='currentTrack.title'></p>
             </div>
-          </li>
-          <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
-            <div id="moreNavPopover" class="popover">
-              <ul class="popover-list">
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#license">License</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#colophon">Colophon</a>
-                </li>
-              </ul>
+            <div class='audio-player__song mt0 animatedMed fadeIn'>
+              <p class='m0 grey truncate' ng-bind='currentTrack.artist'></p>
             </div>
-          </li>
-        </ul>
+          </div>
+          <div class='audio-player__controls center mt3 mb3'>
+            <div class='audio-player__volume inline-block'>
+              <i class='fa fa-volume-up' ng-click='show=!show'></i>
+              <div class='volume ng-cloak' ng-show='show'>
+                <input class='vslider' data-slider-orientation='horizontal' data-slider-selection='after' data-slider-step='1' data-slider-tooltip='hide' data-slider-value=''>
+              </div>
+            </div>
+            <div class='audio-player__play inline-block'>
+              <a href='' ng-click='PlayPauseClick()'>
+                <i class='fa fa-play mx3 h1' ng-class="{'fa-play': audio.state !== 'playing', 'fa-pause': audio.state !== 'stopped'}"></i>
+              </a>
+            </div>
+            <div class='audio-player__skip inline-block'>
+              <a href='' ng-click='audio.PlayNextSong()'>
+                <i class='fa fa-forward'></i>
+              </a>
+            </div>
+          </div>
+          <div id='progress-bar'>
+            <div id='progress'></div>
+          </div>
+        </div>
       </div>
-    </nav>
-
-    <!-- Why use Skeleton -->
-    <div class="docs-section" id="intro">
-      <h6 class="docs-header">Is Skeleton for you?</h6>
-      <p>You should use Skeleton if you're embarking on a smaller project or just don't feel like you need all the utility of larger frameworks. Skeleton only styles a handful of standard HTML elements and includes a grid, but that's often more than enough to get started. In fact, <u>this site is built on Skeleton and has ~200 lines of custom CSS</u> (half of which is the docking navigation).</p>
-      <p>Love Skeleton and want to Tweet it, share it, or star it? Well, I appreciate that <3</p>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.getskeleton.com" data-text="Skeleton - A dead simple, responsive boilerplate." data-via="dhg" data-related="dhg">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
-      <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-      <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-    </div>
-
-   
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+      <div class='main'>
+        <footer class='col-12 ng-cloak animatedLong fadeIn'>
+          <ul class='list-reset center'>
+            <li class='inline-block'>
+              <a href='http://soundcloud.com' target='_blank'>
+                <i class='fa fa-soundcloud'></i>
+                Powered by Soundcloud
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </body>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js'></script>
+    <script>
+      window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')
+    </script>
+    <script src="js/main-3bac1933.js"></script>
+  </head>
 </html>
