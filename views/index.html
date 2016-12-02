@@ -7,7 +7,7 @@
 <!--[if !IE]> > <![endif]-->
 <html>
   <head>
-    <title>WHITE LABEL TEMPLATE</title>
+    <title>Mood Tunes Us</title>
     <base href='/'>
     <link href='' rel='canonical'>
     <meta charset='utf-8' content='text/html' http-equiv='content-type'>
@@ -46,14 +46,14 @@
           <a href='/'>
             <img alt='White Label Template' class='fit' src='img/logo-58773ac0.svg'>
           </a>
-          <h2 class='center'>White Label Template</h2>
+          <h2 class='center'>Mood Tunes</h2>
         </div>
         <ng-view></ng-view>
         <div class='main__archive ng-cloak animatedLong fadeIn'>
           <ul class='main__archive-grid' ng-controller='MixListCtrl'>
             <li class='currentMix mix' ng-repeat='mix in Mix.Mixes.array'>
               <div ng-class="{'mixtapes': true, 'playing': mix.id === Mix.PlayingMixID}" ng-click='ChangeMixtape(mix)'>
-                <img alt='{{mix.title}}' class='lazy animated fadeIn' data-original='{{mix.artwork_url}}?h=250&amp;w=250' height='250' src='/img/grey-c08ae59b.jpg' width='250'>
+                <img alt='{{mix.title}}' class='lazy animated fadeIn' data-original='{{mix.artwork_url}}' height='250' src='/img/grey-c08ae59b.jpg' width='250'>
                 <span>{{mix.title}}</span>
               </div>
             </li>
